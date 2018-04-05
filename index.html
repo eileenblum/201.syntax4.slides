@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Syntax 4</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Eileen Blum" />
+    
+    <link rel="stylesheet" href="https://www.jvcasillas.com/ru_xaringan/css/rutgers.css" type="text/css" />
+    <link rel="stylesheet" href="https://www.jvcasillas.com/ru_xaringan/css/rutgers-fonts.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Syntax 4
+## Week 12
+### Eileen Blum
+### Rutgers University </br> April 5, 2018
+
+---
+
+
+
+
+# Business
+
+- Homework 5 graded
+
+- Homework 6 **due Monday April 9**
+
+- Homework 7 will be posted next week
+
+---
+
+# Review
+
+- So far we have learned that our syntactic competence includes
+
+  - parts of speech
+  - PSRs for combining them to create  
+  - sentences with hierarchical structure
+
+--
+
+### Today,
+
+- We will add to this list information about what types of words can be combined.
+
+- And we will learn how to discover PSRs from foreign language data.
+
+---
+
+# Final English PSRs
+
+CP `\(\rightarrow\)` (C) TP &lt;br&gt;
+TP `\(\rightarrow\)` {NP/CP} (T) VP &lt;br&gt;
+NP `\(\rightarrow\)` (D) (AdjP+) N (PP+) (CP) &lt;br&gt;
+VP `\(\rightarrow\)` (AdvP+) V (NP) ({NP/CP}) (AdvP+) (PP+) (AdvP+) &lt;br&gt;
+PP `\(\rightarrow\)` P NP &lt;br&gt;
+AdjP `\(\rightarrow\)` (AdvP) Adj &lt;br&gt;
+AdvP `\(\rightarrow\)` (AdvP) Adv 
+
+In groups, take 10 minutes to draw the trees for the two sentences you are given. I will then select which groups will draw one tree on the board.
+---
+
+# Subcategorization
+
+-Our PSRs overgenerate
+
+.pull-left[
+- John told Jim that Eliza is leaving. &lt;br&gt;
+- Fenster put the wombat in the bathtub. &lt;br&gt;
+- The linguist on the table
+]
+
+.pull-right[
+- *John kicked Jim that Eliza is leaving
+- *Fenster put the wombat
+- *The linguist on French
+]
+
+--
+
+- The standard story for this is **subcategorization**: lexical entries of words include further restrictions about what their phrases contain (animate NPs, CPs, no CPs, etc.)
+
+---
+
+# Phrase structure in other languages
+
+- Last week, we talked about how languages vary in basic word order
+
+--
+
+- In our more sophisticated understanding of syntax, this translates to variation in phrase structure rules.
+- What rule can we posit for VPs in Japanese? &lt;br&gt;
+
+Satoshi-ga |Takashi-wo  |disu-tta
+-----------|------------|---------
+Satoshi-NOM|Takashi-ACC |diss-PAST
+.center["Satoshi dissed Takashi"]
+
+--
+
+- VP `\(\rightarrow\)` (NP) V
+
+---
+
+# A digression on case
+
+- NOM (*nominative*) and ACC (*accusative*) are explicit expressions of **case** &lt;br&gt;
+
+Satoshi-ga |Takashi-wo  |disu-tta
+-----------|------------|---------
+Satoshi-NOM|Takashi-ACC |diss-PAST
+.center["Satoshi dissed Takashi"]
+
+--
+
+- **Case** is a property of nouns depending on their role in a sentence &lt;br&gt;
+
+He        |saw   |him       |
+----------|------|----------|
+nominative|past  |accusative|
+
+--
+
+- Strictly speaking, all nouns have case, but it is not always pronounced (depending on the morphology of the language) &lt;br&gt;
+
+.center[John-Ø.NOM saw Steve-Ø.ACC]
+
+---
+
+# Phrase structure in other languages
+
+- Consider the following data and questions on Sinhala &lt;br&gt;
+
+Jōn | ballavə| däkka|
+----|--------|------|
+John|dog     |saw
+.center["John saw the dog"]  
+
+Jōn | janēle |iñdəla| ballavə|  däkka|
+----|--------|------|--------|-------|
+John|window  |from  |dog     |saw    |
+.center["John saw the dog from the window"]
+
+- What is the PP rule of Sinhala?
+
+--
+
+PP `\(\rightarrow\)` NP P
+
+--
+
+- What is the VP rule of Sinhala?
+
+--
+
+VP `\(\rightarrow\)` (PP) NP V
+
+---
+
+# Practice
+
+In groups, posit an NP, VP, and TP rule to account for the Hixkaryana data below. 
+
+- *some* and *all* are determiners
+- assume AdjP `\(\rightarrow\)` Adj 
+- What is the part of speech of *Newehyatxhe* in (b)?&lt;br&gt;
+
+Draw the trees for (a)-(c)
+
+(a)|kuraha|yonyhoryeno|biyekomo
+---|------|-----------|--------
+gl:|bow   |made       |boy
+.center["The boy made a bow"]
+
+(b)|Newehyatxhe|woriskomo|komo
+---|-----------|---------|----
+gl:|take-bath  |women    |all
+.center["All the women take a bath"]
+
+(c)|Toto  |heno|komo|yonoye|kamara
+---|------|----|----|------|------
+gl:|person|dead|all |ate   |jaguar
+.center["The jaguar ate all the dead people"]
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://www.jvcasillas.com/ru_xaringan/js/ru_xaringan.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
